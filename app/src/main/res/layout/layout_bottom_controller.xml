@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/color_primary"
+    android:clipToPadding="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".screens.main.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_4"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_4">
+
+        <ImageView
+            android:id="@+id/imageview_bottom_avatar"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_avatar"/>
+
+        <TextView
+            android:id="@+id/textview_bottom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="@string/notifty_max_line_name"
+            android:paddingBottom="@dimen/dp_4"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14"
+            android:maxLength="@string/bottom_notify_max_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageview_bottom_avatar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageview_bottom_previous"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageview_bottom_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_previous"/>
+
+        <ImageView
+            android:id="@+id/imageview_bottom_play"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageview_bottom_next"
+            app:layout_constraintStart_toEndOf="@+id/imageview_bottom_previous"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pause"/>
+
+        <ImageView
+            android:id="@+id/imageview_bottom_next"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_next"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
